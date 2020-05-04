@@ -1,24 +1,18 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import OnboardingSwipeableViews from './components/onboardingSwipeableViews';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <OnboardingSwipeableViews />
+      <div className='gap x2'></div>
+
+      <div className='login-button-component'>
+        <div className='login-btn'>
+          <google-img></google-img>
+          Login with Google
+        </div>
+      </div>
     </div>
   );
 }

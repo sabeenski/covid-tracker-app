@@ -1,0 +1,47 @@
+.swipeable-item {
+  text-align: center;
+  height: calc(95vh - 100px);
+  padding-top: 50px;
+}
+
+.pagination {
+  position: fixed;
+  bottom: 130px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+
+  .dots {
+    margin: 0 5px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #C4C4C4;
+
+    &.active {
+      background-color: #516BE8;
+    }
+  }
+}
+
+.login-button-component {
+  background: url("../images/Vector\ 1.svg");
+  background-size: cover;
+  height: 150px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  text-align: center;
+
+  .login-btn {
+    background-color: #516BE8;
+    border-radius: 8px;
+    display: inline-block;
+    padding: 7px 15px;
+    color: #fff;
+    margin-top: 80px;
+  }
+}
