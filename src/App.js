@@ -1,19 +1,18 @@
 import React from 'react';
-import OnboardingSwipeableViews from './components/onboardingSwipeableViews';
+import { Switch, Route } from 'react-router';
+import OnboardingView from './views/Onboarding';
+import CompleteRegistrationView from './views/CompleteRegistration';
 
 function App() {
   return (
-    <div>
-      <OnboardingSwipeableViews />
-      <div className='gap x2'></div>
-
-      <div className='login-button-component'>
-        <div className='login-btn'>
-          <google-img></google-img>
-          Login with Google
-        </div>
-      </div>
-    </div>
+    <Switch>
+      <Route exact path='/' component={OnboardingView} />
+      <Route
+        exact
+        path='/completeRegistration'
+        component={CompleteRegistrationView}
+      />
+    </Switch>
   );
 }
 
