@@ -1,0 +1,78 @@
+.button-sheet {
+  .overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(#000, 0.5);
+    z-index: 998;
+    animation: fadeIn 0.2s ease-in-out;
+  }
+
+  .contents {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #fff;
+    padding: 30px 0;
+    z-index: 999;
+    border-radius: 10px 10px 0 0;
+    animation: riseUp 0.2s ease-in-out;
+
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+
+    50% {
+      opacity: 0.5;
+    }
+
+    100% {
+      opacity: 1;
+    }
+
+  }
+
+  @keyframes riseUp {
+    0% {
+      transform: translateY(100%);
+    }
+
+    100% {
+      transform: translateY(0);
+    }
+
+  }
+}
+
+.button-sheet-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  padding: 0 20px;
+
+  &:hover {
+    background-color: rgba(#000, 0.1);
+  }
+
+  .icon-text {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    img {
+      margin-right: 12px;
+    }
+
+    p {
+      font-size: 14px;
+      font-weight: 700;
+    }
+  }
+}
