@@ -16,14 +16,17 @@ import ReportBtn from '../../assets/images/reports.svg';
 import { colors } from '../../utils/colors';
 import StatsProgressBar from '../../components/StatsProgressBar';
 import ButtonSheet, { ButtonSheetIconBtn } from '../../components/ButtonSheet';
-import { Link } from 'react-router-dom';
 
 function HomeScreenView({ history }) {
   const [showMore, setShowMore] = React.useState(false);
   return (
     <section id='home-screen'>
       <ButtonSheet visible={showMore} onClose={() => setShowMore(false)}>
-        <ButtonSheetIconBtn text='Events' icon={EventBtn} />
+        <ButtonSheetIconBtn
+          text='Events'
+          icon={EventBtn}
+          onClick={() => history.push('/event')}
+        />
         <ButtonSheetIconBtn
           text='Surveys'
           icon={SurveyBtn}
@@ -47,7 +50,12 @@ function HomeScreenView({ history }) {
         <div className='gap x2'></div>
         <div className='flex jcsb'>
           <IconButton text='Contacts' color={colors.blue} icon={ContactIcon} />
-          <IconButton text='News' color={colors.orange} icon={NewsIcon} />
+          <IconButton
+            text='News'
+            color={colors.orange}
+            icon={NewsIcon}
+            onClick={() => history.push('/news')}
+          />
           <IconButton text='Chat' color={colors.purple} icon={ChatIcon} />
           <IconButton
             text='More'
